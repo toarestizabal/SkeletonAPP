@@ -46,17 +46,15 @@
         </ion-select>
       </ion-item>
 
-      <!-- Fecha Nacimiento -->
-      <ion-item>
-        <ion-label position="stacked">Fecha Nacimiento</ion-label>
-        <ion-input 
-          [(ngModel)]="fechaNacimiento" 
-          type="text" 
-          placeholder="DD/MM/AAAA"
-          maxlength="10"
-          (ionInput)="formatearFecha($event)">
-        </ion-input>
-      </ion-item>
+     <!-- Fecha Nacimiento  -->
+<ion-item>
+  <ion-label position="stacked">Fecha Nacimiento</ion-label>
+  <ion-input 
+    [(ngModel)]="fechaNacimiento" 
+    type="date"
+    placeholder="Seleccione fecha">
+  </ion-input>
+</ion-item>
 
       <!-- Botones -->
       <div class="ion-margin-top">
