@@ -1,0 +1,34 @@
+ion-content {
+  --display: flex;
+  --justify-content: center;
+  --align-items: center;
+}
+
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-container {
+  
+  
+  h1 {
+    color: #000000 !important;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  ion-item {
+    --color: #000000;
+  }
+  
+  ion-button {
+    --color: #ffffff;
+  }
+}

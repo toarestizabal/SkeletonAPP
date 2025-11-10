@@ -1,26 +1,17 @@
-<ion-content class="ion-padding">
-  <!-- MATERIAL  -->
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>Inicio de Sesión</mat-card-title>
-    </mat-card-header>
-
-    <mat-card-content>
-      
-      <ion-item>
-        <ion-label position="floating">Usuario</ion-label>
-        <ion-input [(ngModel)]="usuario" type="text" name="usuario"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label position="floating">Clave (4 dígitos)</ion-label>
-        <ion-input [(ngModel)]="clave" type="password" maxlength="4" name="clave"></ion-input>
-      </ion-item>
-    </mat-card-content>
-
-    <mat-card-actions>
+<ion-content>
+  <div class="login-container">
+    <h1>METAFIT</h1>
     
-      <ion-button expand="block" (click)="ingresar()">INGRESAR</ion-button>
-    </mat-card-actions>
-  </mat-card>
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input [(ngModel)]="usuario" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Clave (4 dígitos)</ion-label>
+      <ion-input [(ngModel)]="clave" type="password" maxlength="4"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" (click)="ingresar()">INGRESAR</ion-button>
+  </div>
 </ion-content>
