@@ -17,6 +17,7 @@ export class HomePage implements OnInit {
 
   @ViewChild('nombreInput', { read: ElementRef }) nombreInput!: ElementRef;
   @ViewChild('apellidoInput', { read: ElementRef }) apellidoInput!: ElementRef;
+  @ViewChild('tituloHome', { read: ElementRef }) tituloHome!: ElementRef;
 
   constructor(
     private router: Router,
@@ -28,14 +29,28 @@ export class HomePage implements OnInit {
     }
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    setTimeout(() => {
+      this.animarTitulo();
+    }, 300);
+  }
+
+  async animarTitulo() {
+    if (this.tituloHome?.nativeElement) {
+      const animation = this.animationCtrl.create()
+        .addElement(this.tituloHome.nativeElement)
+        .duration(800)
+        .fromTo('opacity', '0', '1')
+        .fromTo('transform', 'translateY(-15px)', 'translateY(0px)');
+
+      await animation.play();
+    }
+  }
 
   async limpiar() {
-    // Primero: Animación de desvanecimiento
     await this.animarInput(this.nombreInput.nativeElement);
     await this.animarInput(this.apellidoInput.nativeElement);
     
-    // Después: Limpiar campos
     this.nombre = '';
     this.apellido = '';
     this.educacion = '';
@@ -45,27 +60,17 @@ export class HomePage implements OnInit {
   async animarInput(element: any) {
     const animation = this.animationCtrl.create()
       .addElement(element)
-      .duration(800)
+      .duration(500)
       .iterations(1)
       .keyframes([
-        { offset: 0, opacity: '1', transform: 'scale(1)' },
-        { offset: 0.5, opacity: '0.7', transform: 'scale(0.98)' },
-        { offset: 1, opacity: '1', transform: 'scale(1)' }
+        { offset: 0, transform: 'translateX(0px)' },
+        { offset: 0.25, transform: 'translateX(-5px)' },
+        { offset: 0.5, transform: 'translateX(5px)' },
+        { offset: 0.75, transform: 'translateX(-5px)' },
+        { offset: 1, transform: 'translateX(0px)' }
       ]);
 
     await animation.play();
-  }
-
-  formatearFecha(event: any) {
-    let value = event.target.value.replace(/\D/g, ''); // Remover caracteres no numéricos
-    
-    if (value.length > 2 && value.length <= 4) {
-      value = value.substring(0, 2) + '/' + value.substring(2);
-    } else if (value.length > 4) {
-      value = value.substring(0, 2) + '/' + value.substring(2, 4) + '/' + value.substring(4, 8);
-    }
-    
-    this.fechaNacimiento = value;
   }
 
   mostrar() {

@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <h2>Bienvenido, {{ usuario }}!</h2>
+  <h2 #tituloHome style="opacity: 0;">Bienvenido, {{ usuario }}!</h2>
   
   <ion-card>
     <ion-card-header>
@@ -13,7 +13,6 @@
     </ion-card-header>
 
     <ion-card-content>
-      <!-- Nombre -->
       <ion-item>
         <ion-label position="stacked">Nombre *</ion-label>
         <ion-input 
@@ -24,7 +23,6 @@
         </ion-input>
       </ion-item>
 
-      <!-- Apellido -->
       <ion-item>
         <ion-label position="stacked">Apellido *</ion-label>
         <ion-input 
@@ -35,7 +33,6 @@
         </ion-input>
       </ion-item>
 
-      <!-- Nivel de Educación -->
       <ion-item>
         <ion-label position="stacked">Nivel de Educación</ion-label>
         <ion-select [(ngModel)]="educacion" interface="action-sheet">
@@ -46,17 +43,15 @@
         </ion-select>
       </ion-item>
 
-     <!-- Fecha Nacimiento  -->
-<ion-item>
-  <ion-label position="stacked">Fecha Nacimiento</ion-label>
-  <ion-input 
-    [(ngModel)]="fechaNacimiento" 
-    type="date"
-    placeholder="Seleccione fecha">
-  </ion-input>
-</ion-item>
+      <ion-item>
+        <ion-label position="stacked">Fecha Nacimiento</ion-label>
+        <ion-input 
+          [(ngModel)]="fechaNacimiento" 
+          type="date"
+          placeholder="Seleccione fecha">
+        </ion-input>
+      </ion-item>
 
-      <!-- Botones -->
       <div class="ion-margin-top">
         <ion-button expand="block" color="light" (click)="limpiar()">
           Limpiar
