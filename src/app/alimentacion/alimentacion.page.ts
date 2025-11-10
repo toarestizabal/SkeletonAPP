@@ -6,11 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./alimentacion.page.scss'],
   standalone: false
 })
+
 export class AlimentacionPage implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  agregarAlimento() {
+    alert('¡Alimento agregado correctamente!');
   }
 
+  constructor() {}
+  ngOnInit() {}
 }

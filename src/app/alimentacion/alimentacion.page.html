@@ -8,16 +8,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-
   <!-- CARD PRINCIPAL -->
-  <ion-card color="success" #cardAlimentacion>
+  <ion-card color="success">
     <ion-card-header>
-      <ion-card-title>🍎 Registro de Alimentación</ion-card-title>
+      <ion-card-title>📊 Registro de Alimentación</ion-card-title>
       <ion-card-subtitle>Controla tu ingesta diaria de calorías</ion-card-subtitle>
     </ion-card-header>
   </ion-card>
 
-  <!-- FORMULARIO DE REGISTRO -->
+  <!--REGISTRO -->
   <ion-card>
     <ion-card-header>
       <ion-card-title>Agregar Alimento</ion-card-title>
@@ -38,26 +37,26 @@
         <ion-input type="time"></ion-input>
       </ion-item>
 
-      <ion-button expand="block" color="primary" class="ion-margin-top">
+      <ion-button expand="block" color="primary" class="ion-margin-top" (click)="agregarAlimento()">
         <ion-icon slot="start" name="add-circle"></ion-icon>
-        Registrar Alimento
+        AGREGAR ALIMENTO
       </ion-button>
     </ion-card-content>
   </ion-card>
 
-  <!-- LISTA DE ALIMENTOS REGISTRADOS -->
-  <ion-list>
-    <ion-list-header>
-      <ion-label>Alimentos de Hoy</ion-label>
-    </ion-list-header>
+  <!-- LISTA DE ALIMENTOS -->
+  <ion-list-header>
+    <ion-label>Alimentos de hoy</ion-label>
+  </ion-list-header>
 
+  <ion-list>
     <ion-item>
       <ion-avatar slot="start">
         <ion-icon name="nutrition" color="primary"></ion-icon>
       </ion-avatar>
       <ion-label>
-        <h3>Desayuno: Avena con frutas</h3>
-        <p>350 calorías - 08:30 AM</p>
+        <h3>Avena con frutas</h3>
+        <p>338 calorías • 08:10 AM</p>
       </ion-label>
       <ion-icon name="checkmark-circle" color="success" slot="end"></ion-icon>
     </ion-item>
@@ -67,8 +66,8 @@
         <ion-icon name="fast-food" color="warning"></ion-icon>
       </ion-avatar>
       <ion-label>
-        <h3>Almuerzo: Ensalada César</h3>
-        <p>420 calorías - 01:15 PM</p>
+        <h3>Ensalada César</h3>
+        <p>348 calorías • 02:15 PM</p>
       </ion-label>
       <ion-icon name="checkmark-circle" color="success" slot="end"></ion-icon>
     </ion-item>
@@ -78,34 +77,33 @@
         <ion-icon name="ice-cream" color="tertiary"></ion-icon>
       </ion-avatar>
       <ion-label>
-        <h3>Merienda: Yogurt griego</h3>
-        <p>180 calorías - 05:00 PM</p>
+        <h3>Yogurt griego</h3>
+        <p>148 calorías • 06:00 PM</p>
       </ion-label>
       <ion-icon name="ellipsis-horizontal" color="medium" slot="end"></ion-icon>
     </ion-item>
   </ion-list>
 
-  <!--RESUMEN CALÓRICO -->
+  <!-- RESUMEN CALÓRICO -->
   <ion-card>
     <ion-card-header>
-      <ion-card-title>📊 Resumen del Día</ion-card-title>
+      <ion-card-title>📈 Resumen del Día</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-grid>
         <ion-row>
           <ion-col>
-            <h3>Total Calorías</h3>
-            <h2>950</h2>
+            <h3>Total calorías</h3>
+            <h2>834</h2>
           </ion-col>
           <ion-col>
-            <h3>Meta Diaria</h3>
-            <h2>2000</h2>
+            <h3>Alimentos</h3>
+            <h2>3</h2>
           </ion-col>
         </ion-row>
       </ion-grid>
-      <ion-progress-bar value="0.475" color="warning"></ion-progress-bar>
+      <ion-progress-bar value="0.47" color="warning"></ion-progress-bar>
       <p class="ion-text-center">47.5% completado</p>
     </ion-card-content>
   </ion-card>
-
 </ion-content>

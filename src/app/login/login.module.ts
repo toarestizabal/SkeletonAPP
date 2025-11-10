@@ -5,7 +5,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input'; // CORREGIDO
+import { MatInputModule } from '@angular/material/input'; 
 import { MatButtonModule } from '@angular/material/button';
 
 import { LoginPageRoutingModule } from './login-routing.module';
@@ -17,7 +17,7 @@ import { LoginPage } from './login.page';
     FormsModule,
     IonicModule,
     LoginPageRoutingModule,
-    // AGREGAR ESTOS MÓDULOS AL ARRAY:
+    
     MatCardModule,
     MatFormFieldModule,
     MatInputModule, 
