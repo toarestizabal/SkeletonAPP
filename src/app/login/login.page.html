@@ -1,27 +1,26 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content class="ion-padding">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Inicio de Sesión</ion-card-title>
-    </ion-card-header>
+  <!-- CARD DE MATERIAL (SOLO ESTE) -->
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Inicio de Sesión</mat-card-title>
+    </mat-card-header>
 
-    <ion-card-content>
+    <mat-card-content>
+      <!-- VOLVER A COMPONENTES IONIC (SE VEN MEJOR) -->
       <ion-item>
         <ion-label position="floating">Usuario</ion-label>
-        <ion-input [(ngModel)]="usuario" type="text"></ion-input>
+        <ion-input [(ngModel)]="usuario" type="text" name="usuario"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Clave (4 dígitos)</ion-label>
-        <ion-input [(ngModel)]="clave" type="password" maxlength="4"></ion-input>
+        <ion-input [(ngModel)]="clave" type="password" maxlength="4" name="clave"></ion-input>
       </ion-item>
+    </mat-card-content>
 
-      <ion-button expand="block" (click)="ingresar()">Ingresar</ion-button>
-    </ion-card-content>
-  </ion-card>
+    <mat-card-actions>
+      <!-- BOTÓN IONIC (SE VE MEJOR) -->
+      <ion-button expand="block" (click)="ingresar()">INGRESAR</ion-button>
+    </mat-card-actions>
+  </mat-card>
 </ion-content>

@@ -34,6 +34,7 @@ export class HomePage implements OnInit {
     setTimeout(() => {
       this.animarTitulo();
       this.animarCard();
+      this.animarCard();
     }, 500);
   }
 
@@ -61,8 +62,21 @@ export class HomePage implements OnInit {
 
       animation.play();
     }
+
+     if (this.cardPerfil) {
+       const animation = this.animationCtrl.create()
+       .addElement(this.cardPerfil.nativeElement)
+       .duration(800)
+       .fromTo('transform', 'scale(0.5)', 'scale(1)')
+       .fromTo('opacity', '0', '1');
+    animation.play();
   }
 
+  }
+
+
+
+  
   //  LIMPIAR FORMULARIO
   limpiar() {
     this.nombre = "";
