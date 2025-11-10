@@ -26,6 +26,15 @@ export class EjerciciosPage implements OnInit {
 
   completarRutina() {
     this.rutinaCompletada = true;
+    
+    // Animación de celebración
+    setTimeout(() => {
+      const elementos = document.querySelectorAll('.ejercicio-item');
+      elementos.forEach(item => {
+        item.classList.add('rutina-completada');
+      });
+    }, 100);
+
     setTimeout(() => {
       alert('¡Rutina completada con éxito! 🎉');
     }, 300);

@@ -23,7 +23,7 @@
       <ion-label>Ejercicios para Hoy</ion-label>
     </ion-list-header>
 
-    <ion-item>
+    <ion-item class="ejercicio-item">
       <ion-avatar slot="start">
         <ion-icon name="barbell" color="primary"></ion-icon>
       </ion-avatar>
@@ -36,7 +36,7 @@
       </ion-badge>
     </ion-item>
 
-    <ion-item>
+    <ion-item class="ejercicio-item">
       <ion-avatar slot="start">
         <ion-icon name="walk" color="secondary"></ion-icon>
       </ion-avatar>
@@ -49,7 +49,7 @@
       </ion-badge>
     </ion-item>
 
-    <ion-item>
+    <ion-item class="ejercicio-item">
       <ion-avatar slot="start">
         <ion-icon name="fitness" color="tertiary"></ion-icon>
       </ion-avatar>
@@ -81,8 +81,8 @@
     </ion-row>
   </ion-grid>
 
-  <!-- GREGAR EJERCICIO -->
-  <ion-card *ngIf="mostrarFormulario">
+  <!-- AGREGAR EJERCICIO -->
+  <ion-card *ngIf="mostrarFormulario" class="nuevo-ejercicio">
     <ion-card-header>
       <ion-card-title>➕ Agregar Nuevo Ejercicio</ion-card-title>
     </ion-card-header>
