@@ -1,2 +1,111 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+/* Orange Peach Theme for Fitness App */
+:root {
+  /* Colores principales */
+  --ion-color-primary: #FF8A65;     /* Naranjo suave */
+  --ion-color-primary-rgb: 255, 138, 101;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #e07a55;
+  --ion-color-primary-tint: #ff9674;
+
+  /* Colores secundarios */
+  --ion-color-secondary: #FFB74D;   /* Naranjo más claro */
+  --ion-color-secondary-rgb: 255, 183, 77;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-contrast-rgb: 0, 0, 0;
+  --ion-color-secondary-shade: #e0a044;
+  --ion-color-secondary-tint: #ffbe5f;
+
+  /* Colores de éxito */
+  --ion-color-success: #4CAF50;     /* Verde para acciones positivas */
+  --ion-color-success-rgb: 76, 175, 80;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #439a46;
+  --ion-color-success-tint: #5eb762;
+
+  /* Fondo general */
+  --ion-background-color: #FFF8F0;   /* Blanco con tono peach muy suave */
+  --ion-background-color-rgb: 255, 248, 240;
+
+  /* Textos */
+  --ion-text-color: #5D4037;         /* Marrón oscuro para buen contraste */
+  --ion-text-color-rgb: 93, 64, 55;
+
+  /* Cards */
+  --ion-card-background: #ffffff;
+  --ion-item-background: #ffffff;
+}
+
+/* Aplicar colores a toolbars */
+ion-toolbar {
+  --background: var(--ion-color-primary);
+  --color: var(--ion-color-primary-contrast);
+}
+
+/* Mejorar cards */
+ion-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 138, 101, 0.15);
+}
+
+/* Botones más modernos */
+ion-button {
+  --border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Forzar fondo blanco en toda la app */
+ion-content {
+  --background: #FFF8F0 !important;
+  background: #FFF8F0 !important;
+}
+
+/* Forzar cards blancos */
+ion-card {
+  --background: #ffffff !important;
+  background: #ffffff !important;
+}
+
+/* Forzar items blancos */
+ion-item {
+  --background: #ffffff !important;
+  background: #ffffff !important;
+}
+
+/* SOLUCIÓN PARA MATERIAL DESIGN - Login visible */
+mat-card {
+  --background: #ffffff !important;
+  background: #ffffff !important;
+  color: #5D4037 !important;
+}
+
+mat-card-title, mat-card-subtitle {
+  color: #5D4037 !important;
+}
+
+mat-form-field {
+  color: #5D4037 !important;
+}
+
+mat-label {
+  color: #5D4037 !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #FF8A65 !important; /* Borde naranjo */
+}
+
+.mat-input-element {
+  color: #5D4037 !important; /* Texto de input */
+}
+
+/* Solo hacer el texto visible */
+mat-card-title, mat-label, .mat-form-field {
+  color: #5D4037 !important;
+}
+
+/* Solución definitiva */
+mat-card * {
+  color: #5D4037 !important;
+}

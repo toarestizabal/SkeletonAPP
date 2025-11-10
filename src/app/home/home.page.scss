@@ -1,0 +1,9 @@
+
+ion-card, ion-item, ion-label, ion-input, ion-select, h2 {
+  color: #5D4037 !important;
+}
+
+ion-input::placeholder, ion-select::placeholder {
+  color: #5D4037 !important;
+  opacity: 0.7;
+}
