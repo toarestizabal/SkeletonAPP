@@ -1,13 +1,131 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>progreso</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Progreso</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">progreso</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <!--  RESUMEN GENERAL -->
+  <ion-card color="tertiary" #cardProgreso>
+    <ion-card-header>
+      <ion-card-title>📊 Mi Progreso General</ion-card-title>
+      <ion-card-subtitle>Resumen de tu rendimiento semanal</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <!--  CARDS DE ESTADÍSTICAS -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card>
+          <ion-card-content class="ion-text-center">
+            <h2>5</h2>
+            <p>Días activos</p>
+            <ion-icon name="calendar" color="primary" size="large"></ion-icon>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card>
+          <ion-card-content class="ion-text-center">
+            <h2>12</h2>
+            <p>Ejercicios</p>
+            <ion-icon name="barbell" color="success" size="large"></ion-icon>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card>
+          <ion-card-content class="ion-text-center">
+            <h2>4,500</h2>
+            <p>Calorías quemadas</p>
+            <ion-icon name="flame" color="danger" size="large"></ion-icon>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card>
+          <ion-card-content class="ion-text-center">
+            <h2>85%</h2>
+            <p>Completado</p>
+            <ion-icon name="trophy" color="warning" size="large"></ion-icon>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!--  GRÁFICO DE PROGRESO SIMULADO -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>📈 Progreso Semanal</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div style="height: 200px; background: #f5f5f5; border-radius: 8px; display: flex; align-items: end; justify-content: space-around; padding: 16px;">
+        <div style="background: #3880ff; width: 30px; height: 40%; border-radius: 4px;"></div>
+        <div style="background: #3880ff; width: 30px; height: 60%; border-radius: 4px;"></div>
+        <div style="background: #3880ff; width: 30px; height: 80%; border-radius: 4px;"></div>
+        <div style="background: #3880ff; width: 30px; height: 95%; border-radius: 4px;"></div>
+        <div style="background: #3880ff; width: 30px; height: 70%; border-radius: 4px;"></div>
+        <div style="background: #3880ff; width: 30px; height: 85%; border-radius: 4px;"></div>
+        <div style="background: #2dd36f; width: 30px; height: 100%; border-radius: 4px;"></div>
+      </div>
+      <div style="display: flex; justify-content: space-around; margin-top: 8px;">
+        <small>L</small>
+        <small>M</small>
+        <small>M</small>
+        <small>J</small>
+        <small>V</small>
+        <small>S</small>
+        <small>D</small>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- LISTA DE LOGROS -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Logros Obtenidos</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="flash" color="warning"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h3>Primera Semana</h3>
+        <p>Completaste 5 días consecutivos</p>
+      </ion-label>
+      <ion-badge color="success" slot="end">⭐</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="nutrition" color="primary"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h3>Alimentación Saludable</h3>
+        <p>7 días siguiendo tu plan</p>
+      </ion-label>
+      <ion-badge color="success" slot="end">⭐</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="fitness" color="danger"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h3>Rutina Completa</h3>
+        <p>Terminaste todos los ejercicios</p>
+      </ion-label>
+      <ion-badge color="warning" slot="end">🏆</ion-badge>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

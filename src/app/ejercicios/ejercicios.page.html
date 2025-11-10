@@ -1,13 +1,89 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>ejercicios</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ejercicios</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">ejercicios</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  
+  <!-- CARD DE BIENVENIDA -->
+  <ion-card color="primary" #cardEjercicios>
+    <ion-card-header>
+      <ion-card-title>💪 Mi Rutina de Ejercicios</ion-card-title>
+      <ion-card-subtitle>Gestiona tu entrenamiento diario</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- LISTA DE EJERCICIOS -->
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Ejercicios para Hoy</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="barbell" color="primary"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h3>Press de Banca</h3>
+        <p>3 series x 10 repeticiones</p>
+      </ion-label>
+      <ion-badge color="success" slot="end">Completado</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="walk" color="secondary"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h3>Sentadillas</h3>
+        <p>4 series x 12 repeticiones</p>
+      </ion-label>
+      <ion-badge color="warning" slot="end">Pendiente</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="fitness" color="tertiary"></ion-icon>
+      </ion-avatar>
+      <ion-label>
+        <h3>Flexiones</h3>
+        <p>3 series x 15 repeticiones</p>
+      </ion-label>
+      <ion-badge color="warning" slot="end">Pendiente</ion-badge>
+    </ion-item>
+  </ion-list>
+
+  <!--  BOTONES DE ACCIÓN -->
+  <ion-grid class="ion-margin-top">
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="block" color="primary">
+          <ion-icon slot="start" name="add"></ion-icon>
+          Agregar Ejercicio
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block" color="success">
+          <ion-icon slot="start" name="checkmark-done"></ion-icon>
+          Completar Rutina
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!--  CARD DE PROGRESO -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>📈 Progreso Semanal</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Has completado <strong>1 de 3</strong> ejercicios hoy</p>
+      <ion-progress-bar value="0.33" color="primary"></ion-progress-bar>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

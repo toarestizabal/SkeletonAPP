@@ -26,7 +26,7 @@ const routes: Routes = [
   {
     path: 'progreso',
     loadChildren: () => import('./progreso/progreso.module').then(m => m.ProgresoPageModule)
-  }
+  },
 ];
 
 @NgModule({
@@ -35,4 +35,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
